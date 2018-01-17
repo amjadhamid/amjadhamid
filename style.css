@@ -8,14 +8,227 @@ author url : http ://www.amjad451.com;
 
 */
 
+
+/* body element not body class */
+
 body {
-    background-image: url(dirty_wall.jpg) color:#000305;
+    background-image: url(dirty_wall.jpg) color #000305;
     font-size: 90%;
-    font-family: Trebuchet;
+    /*base font size =14 px */
+    font-family: "Times New Roman";
     /*         GillSans ,Calibri , sans-serif;*/
+    line-height: 1.5;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
 }
 
 
+/* unvisited link */
+
+a:link {
+    color: red;
 }
 
-s
+
+/* visited link */
+
+a:visited {
+    color: green;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: rgb(133, 133, 66);
+}
+
+
+/* selected link */
+
+a:active {
+    color: blue;
+}
+
+
+/* body class */
+
+.body {
+    margin: 10px auto;
+    width: 70%;
+    clear: both;
+}
+
+
+/* --------main header--- */
+
+.mainheader img {
+    width: 100%;
+}
+
+.mainheader nav {
+    background-color: rgb(235, 56, 11);
+    height: 40px;
+    border-radius: 9px;
+    /* to make sure that is all browsers do that */
+}
+
+.mainheader nav ul {
+    text-align: center;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.mainheader nav ul li {
+    display: inline;
+}
+
+.mainheader a:link,
+.mainheader a:visited {
+    color: whitesmoke;
+    padding: 10px 30px;
+    display: inline-block;
+    height: 20px;
+}
+
+.mainheader a:hover,
+.mainheader a :active {
+    color: red;
+    background-color: darkblue;
+    text-shadow: 1px 2px black;
+}
+
+
+/* ------maincontent ---- */
+
+.maincontent {
+    width: 70%;
+    float: left;
+}
+
+.top-contant {
+    background-color: rgb(232, 236, 238);
+    /* padding is the size between the word and the top of contant */
+    padding: 3%;
+    /* margin is the size between the all content  */
+    margin: 3%;
+    border-radius: 9px;
+    /* to make sure that is all browsers do that */
+}
+
+.post-info {
+    font-size: 10px;
+    color: #999;
+    font-style: inherit;
+    margin-top: -20px;
+}
+
+.post-content {
+    display: block;
+}
+
+
+/* ------side par ---- */
+
+.side-par {
+    width: 24%;
+    margin: 2% 0 0 2%;
+    float: left;
+    padding: 2%;
+    background-color: rgb(241, 243, 243);
+    border-radius: 9px;
+}
+
+
+/* ---------------footer---------- */
+
+.footer {
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+    background-color: #999;
+    height: 70px;
+    border-radius: 9px;
+    /* to make sure that is all browsers do that */
+}
+
+.footer p {
+    text-align: center;
+    color: whitesmoke;
+    width: 90%;
+}
+
+
+/* -------html5--------- */
+
+.post-img {
+    width: 100%;
+}
+
+figure {
+    margin: 25px 0;
+    font-size: 80%;
+    color: #999;
+}
+
+
+/* ---------css for mobile------------ */
+
+@media screen and (max-width: 480px) {
+    .body {
+        width: 90%;
+        font-size: 95%;
+    }
+    /* --------main header for 480px--- */
+    .mainheader nav {
+        /* here we chenged the height 
+        because there are 5 button to make
+         space for them*/
+        height: 200px;
+    }
+    .mainheader nav ul {
+        /* padding solverd the problem
+        that buttom is out of 
+        background */
+        width: 100%;
+        padding: 0;
+    }
+    .mainheader nav ul li {
+        display: inline;
+    }
+    .mainheader a:link,
+    .mainheader a:visited {
+        /* make the buttons above each other */
+        display: block;
+    }
+    .mainheader a:hover,
+    .mainheader a :active {
+        color: red;
+        background-color: darkblue;
+        text-shadow: 1px 2px black;
+    }
+    /* ---------maincontent mobil ----- */
+    .maincontent {
+        width: 100%;
+    }
+    /* ------side par mobil ---- */
+    .side-par {
+        width: 94%;
+    }
+}
+
+
+/* ---------css for ipad------------ */
+
+@media screen and (max-width: 680px) {
+    .body {
+        width: 90%;
+        font-size: 95%;
+    }
+    .mainheader nav {
+        font-size: 80%;
+    }
+}
